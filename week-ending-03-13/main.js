@@ -118,3 +118,14 @@ function points(games) {
   });
   return total;
 }
+
+// Remove special characters and spaces from string
+function mostUsed(string){
+  string = string
+    .toLowerCase()
+    .replace(/[^a-zA-Z ]/g, "")
+    .replace(/ {1,}/g, " ");
+  string = string.split(' ')
+  return string
+}
+
