@@ -119,19 +119,26 @@ function points(games) {
   return total;
 }
 
-// Remove special characters and spaces from string
-function mostUsed(string){
-  string = string
-    .toLowerCase()
-    .replace(/[^a-zA-Z ]/g, "")
-    .replace(/ {1,}/g, " ");
-  string = string.split(' ')
-  return string
-}
-
 // 8kyu: Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 
   function paperwork(n, m) {
     return n > 0 && m > 0 ? n * m : 0;
   }
 
+  // Find repetative words
+function findMostRepeatedWord(str) {
+  let words = str.toLowerCase().match(/\w+/g);
+  let occurances = {};
+
+  for (let word of words) {
+    if (occurances[word]) {
+      occurances[word]++;
+    } else {
+      occurances[word] = 1;
+    }
+  }
+  return occurances
+}
+
+let para = "How do you do how?";
+console.log(findMostRepeatedWord(para));
