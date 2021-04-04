@@ -73,3 +73,111 @@ function getGrade(s1, s2, s3) {
   }
 
 }
+
+// 5 Kyu: Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. 
+
+function domainName(url){
+  url = url.replace("https://", '');
+  url = url.replace("http://", '');
+  url = url.replace("www.", '');
+  return url.split('.')[0];
+};
+
+// 8 Kyu: Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+const countSheep = function (num) {
+    let count = "";
+        for(let i = 1; i<= num; i++){
+            count +=`${i} sheep...`
+  }
+  return count
+}
+// 8 Kyu: Turn a string into an array
+
+function stringToArray(string) {
+  return string.split(" ");
+}
+
+// 8 Kyu: The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+function cockroachSpeed(h) {
+  return Math.floor(h * 27.778);
+}
+
+// 8 Kyu: Create a function that gives a personalized greeting. This function takes two parameters: name and owner. Use conditionals to return the proper message:
+
+const greet = (personName, owner) => {
+    return personName === owner ? 'Hello boss' : 'Hello guest'
+}
+
+// 8 Kyu: This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+function simpleMultiplication(number) {
+  if (number % 2 === 0) {
+    return number * 8;
+  } else {
+    return number * 9;
+  }
+}
+
+//Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ().  In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained
+
+function expressionMatter(a, b, c) {
+  return Math.max(
+    a + b + c,
+    a * b * c,
+    a * (b + c),
+    (a + b) * c,
+    a + b * c,
+    a * b + c
+  );
+}
+
+// 8 Kyu: You are given two interior angles (in degrees) of a triangle. Write a function to return the 3rd. Note: only positive integers will be tested.
+
+function otherAngle(a, b) {
+  return 180-a-b;
+}
+
+/* 8 Kyu: Messi is a soccer player with goals in three leagues:
+
+LaLiga
+Copa del Rey
+Champions
+Complete the function to return his total number of goals in all three leagues. */
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+// 7 Kyu: Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  let regex = /[aioue]/gi;
+  let found = str.match(regex);
+
+  if (!found) {
+    return 0;
+  } else {
+    return found.length;
+  }
+}
+
+// 8 Kyu: Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. 
+
+String.prototype.toAlternatingCase = function () {
+  return this.split("")
+    .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+    .join("");
+};
+
+// 8 Kyu: Rock, paper, scissors
+const rps = (p1, p2) => {
+    if(p1 === "rock" && p2 === "scissors" || p1 === "paper" && p2 === "rock" || p1 === "scissors" && p2 === "paper"){
+        return "Player 1 won!"
+    } else if(p2 === "rock" && p1 === "scissors" || p2 === "paper" && p1 === "rock" || p2 === "scissors" && p1 === "paper"){
+        return "Player 2 won!"
+    } else {
+        return "Draw!"
+    }
+};
