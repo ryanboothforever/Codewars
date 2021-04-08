@@ -66,3 +66,7 @@ function fixTheMeerkat(arr) {
 function divisibleBy(numbers, divisor) {
   return numbers = numbers.filter(item => item%divisor===0)
 }
+
+// 8 Kyu: Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+let ex = /!/g
+const removeExclamationMarks = (str) => str.replace(ex, "")
