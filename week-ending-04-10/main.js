@@ -86,4 +86,4 @@ function points(games) {
   }
   return x
 }
-console.log(points(scores));
+
