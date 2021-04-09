@@ -70,3 +70,20 @@ function divisibleBy(numbers, divisor) {
 // 8 Kyu: Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 let ex = /!/g
 const removeExclamationMarks = (str) => str.replace(ex, "")
+
+// 8 Kyu: Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection. For example: ["3:1", "2:2", "0:1", ...] Write a function that takes such collection and counts the points of our team in the championship.
+
+function points(games) {
+  let x = 0;
+  for(let i = 0; i < games.length; i++){
+    if(games[i][0] > games[i][2]){
+      x+=3
+    } else if(games[i][0] < games[i][2]) {
+      x+=0
+    } else {
+      x+=1
+    }
+  }
+  return x
+}
+console.log(points(scores));
