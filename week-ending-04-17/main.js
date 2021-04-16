@@ -69,3 +69,102 @@ function hoopCount(n) {
     ? "Keep at it until you get it"
     : "Great, now move on to tricks";
 }
+
+/* 8 Kyu: Ask a small girl - "How old are you?". She always says strange things... Lets help her! For correct answer program should return int from 0 to 9. Assume test input string always valid and may look like "1 year old" or "5 years old", etc.. The first char is number only.*/
+
+function getAge(inputString) {
+  let arr = inputString.split(" ")
+  let newArr = arr.filter(item => parseInt(item))
+  let theNum = newArr.join("")
+  theNum = +theNum
+  return theNum
+}
+
+/* 8 Kyu: Create a method take that accepts a list/array and a number n, and returns a list/array array of the first n elements from the list/array. */
+
+function take(arr, n){
+  newArr= []
+  if(arr.length===0){
+    return newArr
+  } if (arr.length < n) {
+    n = arr.length
+  } 
+  for(let i = 0; i<n; i++){
+    newArr.push(arr[i])
+  }
+  return newArr
+}
+
+/* 8 Kyu: Your function takes two arguments:
+current father's age (years)
+current age of his son (years)
+Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). */
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let double = sonYearsOld*2
+  let difference = dadYearsOld - double
+  let posDiff = Math.abs(difference)
+  if(difference >= 0){
+    return difference
+  } else {
+    return posDiff
+  }
+}
+
+/* 8 Kyu: You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.*/
+
+function updateLight(current) {
+  let colors = ["green", "yellow", "red"]
+  for(let i=0; i<colors.length;i++){
+    if (colors[i]===colors[colors.length-1]) {
+      return colors[0];
+    }
+    if(current === colors[i]){
+      return colors[i+1]
+    }
+  }
+}
+
+/* 8 Kyu: Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n (inclusive). */
+
+function powersOfTwo(n) {
+  const arr = []
+  for(let i = 0; i<=n; i++){
+    arr.push(2**[i])
+  }
+  return arr;
+}
+
+// 8 Kyu: Make a function that receive age, and return what they drink.
+
+function peopleWithAgeDrink(old) {
+  if(old<14){
+    return "drink toddy"
+  } else if(old<18 && old>=14){
+    return "drink coke"
+  } else if (old>=18 && old<21){
+    return "drink beer"
+  } else {
+    return "drink whisky"
+  }
+};
+
+/* 8 Kyu: The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
+
+You will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday.
+
+For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
+
+All inputs will be integers. Please return an integer. Round down.*/
+
+function dutyFree(normPrice, discount, hol) {
+  let priceForBottles;
+  if(discount >= 10){
+    priceForBottles = normPrice * ("." + discount)
+  } else {
+    priceForBottles = normPrice * (".0" + discount);
+  }
+  return Math.floor(hol/priceForBottles)
+}
