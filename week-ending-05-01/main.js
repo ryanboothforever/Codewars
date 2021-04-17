@@ -125,3 +125,17 @@ function testEven(n) {
   return n%2===0 ? true : false
 }
 
+/* Given the a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value. */
+
+function pipeFix(numbers){
+  let first = numbers[0];
+  let last = numbers[numbers.length-1];
+  
+  let arr = [];
+  for(let i = first; i <= last; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+
