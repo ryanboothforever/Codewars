@@ -183,4 +183,3 @@ function preFizz(n) {
 return arr
 }
 
-console.log(preFizz("woof"));
