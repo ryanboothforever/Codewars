@@ -37,3 +37,30 @@ Can you figure out what's wrong here?*/
     let filteredBirds = birds.filter(bird => !geese.includes(bird))
     return filteredBirds
   }
+
+/* 8 Kyu: All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals. */
+
+function feast(beast, dish){
+    let first = beast.charAt(0);
+    let last = beast.charAt(beast.length-1)
+    return first === dish.charAt(0) && last === dish.charAt(dish.length-1) ? true : false
+}
+
+/* 8 Kyu: Implement a function named generateRange(min, max, step), which takes three arguments and generates a range of integers from min to max, with the step. The first integer is the minimum value, the second is the maximum of the range and the third is the step. (min < max) */
+
+function generateRange(min, max, step) {
+    let arr = [];
+    for (let i = min; i <= max; i+=step){
+         arr.push(i)
+    }
+    if(arr[arr.length-1] > max){
+        return arr.slice(0, arr.length-2 )
+    } else {
+    return arr
+    }
+}
+
