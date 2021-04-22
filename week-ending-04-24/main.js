@@ -64,3 +64,52 @@ function generateRange(min, max, step) {
     }
 }
 
+/* 8 Kyu: write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'. the string should start with a 1. a string with size 6 should return :'101010'. with size 4 should return : '1010'. with size 12 should return : '101010101010'. The size will always be positive and will only use whole numbers. */
+
+function stringy(size){
+    let stringOfNums = "1"
+    let one = "1"
+    let zero = "0"
+    for(let i = 1; i < size; i++){
+        if(i%2 === 1){
+            stringOfNums += zero
+        } else {
+            stringOfNums += one
+        }
+    }
+    return stringOfNums
+}
+
+// 8 Kyu: Your job is simple, if (x) squared is more than 1000, return 'It's hotter than the sun!!', else, return 'Help yourself to a honeycomb Yorkie for the glovebox.'.
+
+function apple(x) {
+  return parseInt(x ** 2) > 1000
+    ? "It's hotter than the sun!!"
+    : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
+
+/* 8 Kyu: Your goal in this kata is to create complete the mouth_size method this method take one argument animal which corresponds to the animal encountered by frog. If this one is an alligator (case insensitive) return small otherwise return wide.*/
+
+function mouthSize(animal) {
+    animal = animal.toLowerCase()
+  return animal === "alligator" ? "small" : "wide"
+}
+
+/* 8 Kyu: Task
+Your task is to return the correct string using the Template String Feature. 
+Input: Two Strings, no validation is needed.
+Output: You must output a string containing the two strings with the word ```' are '```
+*/
+
+var TempleStrings = function (obj, feature) {
+  return `${obj} are ${feature}`
+};
+
+/* 8 Kyu: You will be given a vector of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value. The returned value must be a string, and have "***" between each of its letters. You should not remove or add elements from/to the array. */
+
+function twoSort(s) {
+    let sortedArr = s.sort()
+    let starredWord = sortedArr[0];
+    starredWord = starredWord.split("").join("***")
+    return starredWord
+}
