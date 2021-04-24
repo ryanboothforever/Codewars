@@ -113,3 +113,7 @@ function twoSort(s) {
     starredWord = starredWord.split("").join("***")
     return starredWord
 }
+
+// 8 Kyu: Fix this var a = 123.toString();
+
+    var a = (123).toString();
