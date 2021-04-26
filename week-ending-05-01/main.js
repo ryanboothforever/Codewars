@@ -31,3 +31,37 @@ const quarterOf = (month) => {
 };
 
 // smaller code const quarterOf = m => Math.ceil(m/3);
+
+/* 8 Kyu: Given an integral number of watermelons w (1 ≤ w ≤ 100; 1 ≤ w in Haskell), check whether Pete and Billy can divide the melons so that each of them gets an even amount. */
+
+function divide(weight) {
+  if(weight === 2){
+      return false
+  } else if(weight%2===0){
+      return true
+  } else {
+     return false
+  }
+}
+
+/* 8 Kyu: Create an application that will display the number of kilometers per liter (output) based on the number of miles per imperial gallon (input).
+
+Make sure to round off the result to two decimal points. If the answer ends with a 0, it should be rounded off without the 0. So instead of 5.50, we should get 5.5. */
+
+function converter(mpg) {
+    let gallonToKilo = mpg * 1.609344;
+    let kiloPerLiter = gallonToKilo / 4.54609188;
+    let kiloFixed = kiloPerLiter.toFixed(2)
+    let kiloString = kiloFixed.toString()
+    if(kiloString.endsWith('0')){
+        return Number(kiloPerLiter.toFixed(1))
+    } else {
+    return Number(kiloPerLiter.toFixed(2))
+    }
+}
+
+/* 8 Kyu: The code provided is supposed replace all the dots . in the specified String str with dashes - */
+
+var replaceDots = function(str) {
+  return str.replace(/[.]/g, '-');
+}
