@@ -65,3 +65,57 @@ function converter(mpg) {
 var replaceDots = function(str) {
   return str.replace(/[.]/g, '-');
 }
+
+/* 8 Kyu: When provided with a number between 0-9, return it in words.
+Input :: 1
+Output :: "One" */
+
+function switchItUp(number) {
+  switch (number) {
+    case 0:
+      return "Zero";
+      break;
+    case 1:
+      return "One";
+      break;
+    case 2:
+      return "Two";
+      break;
+    case 3:
+      return "Three";
+      break;
+    case 4:
+      return "Four";
+      break;
+    case 5:
+      return "Five";
+      break;
+    case 6:
+      return "Six";
+      break;
+    case 7:
+      return "Seven";
+      break;
+    case 8:
+      return "Eight";
+      break;
+    case 9:
+      return "Nine";
+      break;
+  }
+}
+
+/* 8 Kyu: I have a cat and a dog. I got them at the same time as kitten/puppy. That was humanYears years ago. Return their respective ages now as [humanYears,catYears,dogYears] */
+
+var humanYearsCatYearsDogYears = function (humanYears) {
+  let cat = 24+(4*(humanYears-2));
+  let dog = 24+(5*(humanYears-2));
+  if(humanYears === 1){
+      return [humanYears, 15, 15]
+  } else if(humanYears === 2){
+      return [humanYears, 24, 24]
+  } else {
+      return [humanYears, cat, dog]
+  }
+};
+
