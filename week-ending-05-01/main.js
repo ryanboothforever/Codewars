@@ -119,3 +119,9 @@ var humanYearsCatYearsDogYears = function (humanYears) {
   }
 };
 
+/* 8 Kyu: In this Kata we are passing a number (n) into a function. Your code will determine if the number passed is even (or not). */
+
+function testEven(n) {
+  return n%2===0 ? true : false
+}
+
