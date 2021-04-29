@@ -138,4 +138,23 @@ function pipeFix(numbers){
   return arr;
 }
 
+/* 8 Kyu: Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u). If they are, change the array value to a string of that vowel.*/
 
+function isVow(a) {
+  let newArr = []
+  let vowels = {
+    a: 97, 
+    e: 101, 
+    i: 105, 
+    o: 111, 
+    u: 117
+  }
+  for (let i = 0; i<=a.length-1; i++){
+    if (Object.values(vowels).includes(a[i])) {
+       newArr.push(String.fromCharCode(a[i]));
+  } else {
+      newArr.push(a[i])
+  }
+  }
+return newArr
+}
