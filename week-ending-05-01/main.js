@@ -177,5 +177,3 @@ function toCsvText(array) {
   let newArr = array.join("\n");
   return newArr;
 }
-
-/* 8 Kyu: 
