@@ -54,3 +54,19 @@ function capitalizeWord(word) {
 }
 
 /* 8 Kyu: There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants. Your task is to change the letters with diacritics:*/
+
+function correctPolishLetters(string) {
+  let letters = {
+    ą: "a",
+    ć: "c",
+    ę: "e",
+    ł: "l",
+    ń: "n",
+    ó: "o",
+    ś: "s",
+    ź: "z",
+    ż: "z",
+  };
+  string = string.replace(/[ąćęłńóśźż]/g, (match) => letters[match]);
+  return string;
+}
