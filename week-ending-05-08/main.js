@@ -53,3 +53,15 @@ function getRealFloor(n) {
 const flip = (d, a) => {
   return d === "R" ? a.sort((a, b) => a - b) : a.sort((a, b) => b - a);
 };
+
+/* 8 Kyu: correct the broken function to make sure that the second argument (tail), is the same as the last letter of the first argument (body) - otherwise the tail wouldn't fit! If the tail is right return true, else return false. The arguments will always be strings, and normal letters. */
+
+function correctTail(body, tail) {
+  let sub = body.substring(body.length - tail.length);
+
+  if (sub === tail) {
+    return true;
+  } else {
+    return false;
+  }
+}
