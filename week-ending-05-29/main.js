@@ -42,4 +42,15 @@ function getDrinkByProfession(param) {
       return "Beer";
   }
 }
-console.log(getDrinkByProfession("Rapper"));
+
+/* 8 Kyu: Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case). */
+
+function capitalizeWord(word) {
+  let firstLetter = word.slice(0, 1).toUpperCase();
+  word = word.slice(1);
+  return firstLetter.concat(word);
+}
+
+/* 8 Kyu: There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants. Your task is to change the letters with diacritics:*/
