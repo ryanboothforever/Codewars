@@ -101,3 +101,16 @@ function validateUsr(username) {
   
   return validator.test(username);
 }  */
+
+/* 8 Kyu: Write a function that rearranges an integer into its largest possible value. Example (Input --> Output)*/
+
+function superSize(num) {
+  num = String(num);
+  num = num
+    .split("")
+    .sort((a, b) => b - a)
+    .join("");
+  return Number(num);
+}
+
+console.log(superSize(456));
