@@ -112,5 +112,3 @@ function superSize(num) {
     .join("");
   return Number(num);
 }
-
-console.log(superSize(456));
