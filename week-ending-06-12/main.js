@@ -140,3 +140,9 @@ function getSize(width, height, depth) {
   const volume = width * height * depth;
   return [area, volume];
 }
+
+/* 8 Kyu; In this kata you will create a function that takes in a list and returns a list with the reverse order.*/
+
+function reverseList(list) {
+  return list.reverse();
+}
