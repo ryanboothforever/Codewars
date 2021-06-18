@@ -57,3 +57,12 @@ function helloWorld() {
   var str = "Hello World!";
   console.log(str);
 }
+
+/* 8 Kyu: Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel. */
+function replace(s) {
+  let regEx = /[aioue]/gi;
+  let replaced = s.replace(regEx, "!");
+  return replaced;
+}
+
+console.log(replace("Hello"));
