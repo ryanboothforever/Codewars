@@ -15,5 +15,3 @@ function noBoringZeros(n) {
     return Number(arr.reverse().join(""));
   }
 }
-
-console.log(noBoringZeros(2050));
