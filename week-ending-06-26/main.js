@@ -51,3 +51,9 @@ function finalGrade(exam, projects) {
 function plural(n) {
   return n !== 1;
 }
+
+/* 8 Kyu: Make a function */
+function helloWorld() {
+  var str = "Hello World!";
+  console.log(str);
+}
