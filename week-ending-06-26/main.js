@@ -92,3 +92,9 @@ function combat(health, damage) {
 function saleHotdogs(n) {
   return n >= 10 ? n * 90 : n >= 5 && n < 10 ? n * 95 : n * 100;
 }
+
+/* 8 Kyu: ["h","o","l","a"] Output: String with comma delimited elements of the array in th same order. "h,o,l,a"*/
+
+function printArray(array) {
+  return array.join(",");
+}
