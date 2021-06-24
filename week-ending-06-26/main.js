@@ -98,3 +98,11 @@ function saleHotdogs(n) {
 function printArray(array) {
   return array.join(",");
 }
+
+/* 8 Kyu: Write a function that always returns 5 
+Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/*/
+
+function unusualFive() {
+  const arr = ["a", "p", "p", "l", "e", "s"];
+  return arr.indexOf("s");
+}
