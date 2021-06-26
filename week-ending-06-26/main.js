@@ -112,3 +112,11 @@ function unusualFive() {
 function problem(x) {
   return typeof x === "string" ? "Error" : x * 50 + 6;
 }
+
+/* 8 Kyu: Complete the function which converts hex number (given as a string) to a decimal number.*/
+
+function hexToDec(hexString) {
+  hexString = yourNumber.toString(16);
+  const yourNumber = parseInt(hexString, 16);
+  return yourNumber;
+}
