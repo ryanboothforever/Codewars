@@ -23,3 +23,16 @@ function reverse(string) {
   });
   return newArr.join(" ").trim();
 }
+
+/* 8 Kyu: Create a class Ghost
+Ghost objects are instantiated without any arguments.
+Ghost objects are given a random color attribute of white" or "yellow" or "purple" or "red" when instantiated*/
+
+let Ghost = function () {
+  colorList = ["white", "yellow", "purple", "red"];
+  color = colorList[Math.floor(Math.random() * 4)];
+  constructor(color);
+  {
+    this.color = color;
+  }
+};
