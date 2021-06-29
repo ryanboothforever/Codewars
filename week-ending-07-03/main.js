@@ -6,3 +6,20 @@ function nextId(ids) {
   while (ids.includes(x)) x++;
   return x;
 }
+
+/* 8 Kyu: Create a function called shortcut to remove all the lowercase vowels in a given string.*/
+
+function shortcut(string) {
+  return string.replace(/[aioue]/g, "");
+}
+
+/* 8 Kyu: You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:  As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.*/
+
+function reverse(string) {
+  const arr = string.split(" ");
+  const newArr = [];
+  arr.forEach((element) => {
+    newArr.unshift(element);
+  });
+  return newArr.join(" ").trim();
+}
