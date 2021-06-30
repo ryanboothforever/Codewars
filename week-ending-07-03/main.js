@@ -36,3 +36,23 @@ let Ghost = function () {
     this.color = color;
   }
 };
+
+/* 8 Kyu: Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+E.g. Input: "aa", "bb" , "cc" => Output: "abcabc"*/
+
+function tripleTrouble(one, two, three) {
+  var result = "";
+  for (let i = 0; i < one.length; i++) {
+    result += one.charAt(i) + two.charAt(i) + three.charAt(i);
+  }
+  return result;
+}
+
+/* 8 Kyu: Add the value "codewars" to the websites array.
+After your code executes the websites array should == ["codewars"]
+
+The websites array has already been defined for you using the following code:
+
+var websites = [];*/
+
+websites.push("codewars");
