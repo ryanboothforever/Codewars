@@ -55,4 +55,19 @@ The websites array has already been defined for you using the following code:
 
 var websites = [];*/
 
-websites.push("codewars");
+//websites.push("codewars");
+
+/* 8 Kyu: You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].*/
+
+function differenceInAges(ages) {
+  ages = ages.sort((a, b) => a - b);
+  return [ages[0], ages[ages.length - 1], ages[ages.length - 1] - ages[0]];
+}
+//A faster solution
+function ageDiff(ages) {
+  let max = Math.max(...ages),
+    min = Math.min(...ages);
+  diff = max - min;
+
+  return [min, max, diff];
+}
