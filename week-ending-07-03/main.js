@@ -71,3 +71,11 @@ function ageDiff(ages) {
 
   return [min, max, diff];
 }
+
+/* 8 Kyu: If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";*/
+
+function chromosomeCheck(sperm) {
+  return sperm.search(/y/gi) > 0
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+}
