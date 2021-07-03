@@ -79,3 +79,16 @@ function chromosomeCheck(sperm) {
     ? "Congratulations! You're going to have a son."
     : "Congratulations! You're going to have a daughter.";
 }
+
+/* 8 Kyu: Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.*/
+
+let toBinary = (n) => +n.toString(2);
+
+/* 8 Kyu: Add the value "codewars" to the array websites/Websites 1,000 times.*/
+
+var websites = [];
+let i = 0;
+while (i < 1000) {
+  websites.push("codewars");
+  i++;
+}
