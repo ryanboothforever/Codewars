@@ -130,19 +130,21 @@ function SubtractSum(n) {
     99: "apple",
     100: "pineapple",
   };
-  if (n > 100) {
+  while (n > 100) {
     let strNum = String(n);
     let arr = [...strNum];
-
     arr = arr.map((item) => Number(item));
-    arr = arr.reduce((a, b) => {
+    let numsAdded = arr.reduce((a, b) => {
       return a + b;
     }, 0);
-  } else {
-    return fruits[n];
   }
 }
 
 /* 8 Kyu: This method, which is supposed to return the result of dividing its first argument by its second, isn't always returning correct values. Fix it.*/
 
 const solve = (x, y) => x / y;
+
+/* 8 Kyu: Complete the function which converts a binary number (given as a string) to a decimal number.*/
+function binToDec(bin) {
+  return parseInt(bin, 2);
+}
