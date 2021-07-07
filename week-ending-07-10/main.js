@@ -148,3 +148,13 @@ const solve = (x, y) => x / y;
 function binToDec(bin) {
   return parseInt(bin, 2);
 }
+
+/* 8 Kyu: o help decide those things you've decided to write a function, is_divisible() that will tell you whether a wall of a certain length can exactly fit an integer number of pixels of a certain length.
+
+Your function should take two arguments: the size of the wall in millimeters and the size of a pixel in millimeters. It should return True if you can fit an exact number of pixels on the wall, otherwise it should return False. For example is_divisible(4050, 27) should return True, but is_divisible(4066, 27) should return False.*/
+
+function isDivisible(wallLength, pixelSize) {
+  return wallLength % pixelSize === 0 ? true : false;
+}
+
+console.log(isDivisible(4050, 27));
