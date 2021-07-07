@@ -157,4 +157,9 @@ function isDivisible(wallLength, pixelSize) {
   return wallLength % pixelSize === 0 ? true : false;
 }
 
-console.log(isDivisible(4050, 27));
+/* 8 Kyu: Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.*/
+
+function include(arr, item) {
+  const match = arr.find((val) => val === item);
+  return match === undefined ? false : true;
+}
