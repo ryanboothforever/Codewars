@@ -165,6 +165,12 @@ function include(arr, item) {
 }
 
 /* ? kyu: Compare the two arrays.  Return an array of how many times each element in the 2nd array appears in the first array.*/
-function bong(arr1, arr2) {
+function matchEachElementOfArrs(arr1, arr2) {
   return arr2.map((x) => arr1.filter((y) => y === x).length);
+}
+
+/* 8 Kyu: Each number should be formatted that it is rounded to two decimal places. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.*/
+
+function twoDecimalPlaces(n) {
+  return Number(n.toFixed(2));
 }
