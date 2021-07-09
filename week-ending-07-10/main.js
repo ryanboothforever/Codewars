@@ -174,3 +174,10 @@ function matchEachElementOfArrs(arr1, arr2) {
 function twoDecimalPlaces(n) {
   return Number(n.toFixed(2));
 }
+
+/* 8 Kyu: Create a method sayHello/say_hello/SayHello that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.*/
+
+function sayHello(name, city, state) {
+  let name1 = name.join(" ");
+  return `Hello, ${name1}! Welcome to ${city}, ${state}!`;
+}
