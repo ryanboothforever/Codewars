@@ -163,3 +163,8 @@ function include(arr, item) {
   const match = arr.find((val) => val === item);
   return match === undefined ? false : true;
 }
+
+/* ? kyu: Compare the two arrays.  Return an array of how many times each element in the 2nd array appears in the first array.*/
+function bong(arr1, arr2) {
+  return arr2.map((x) => arr1.filter((y) => y === x).length);
+}
