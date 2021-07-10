@@ -190,3 +190,27 @@ function matrix(arr) {
   }
   return arr;
 }
+
+/* 8 Kyu: This is a spin off of my first kata. You are given a list of character sequences as a comma separated string. Write a function which returns another string containing all the character sequences except the first and the last ones, separated by spaces. If the input string is empty, or the removal of the first and last items would cause the string to be empty, return a null value.*/
+
+function removeFirstAndLast(str) {
+  return str.split(",").slice(1, -1).join(" ") || null;
+}
+
+/* 8 Kyu: In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.*/
+
+function findMultiples(integer, limit) {
+  const arr = [];
+  for (let i = 1; i <= limit; i++) {
+    if (integer * i <= limit) {
+      arr.push(i * integer);
+    }
+  }
+  return arr;
+}
+
+// params are a number, and a number that the first number is multiples of to the max.
+// we are returning an array of numbers that do not exceed the limit, but can include it
+// example: number = 5 limit =  25, Returns [5, 10, 15, 20, 25])
