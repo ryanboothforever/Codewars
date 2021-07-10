@@ -181,3 +181,12 @@ function sayHello(name, city, state) {
   let name1 = name.join(" ");
   return `Hello, ${name1}! Welcome to ${city}, ${state}!`;
 }
+
+/* 7 Kyu: Function receive a two-dimensional square array of random integers. On the main diagonal, all the negative integers must be changed to 0, while the others must be changed to 1 (Note: 0 is considered non-negative, here).*/
+
+function matrix(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i][i] = arr[i][i] < 0 ? 0 : 1;
+  }
+  return arr;
+}
