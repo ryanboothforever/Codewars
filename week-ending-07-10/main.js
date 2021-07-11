@@ -214,3 +214,7 @@ function findMultiples(integer, limit) {
 // params are a number, and a number that the first number is multiples of to the max.
 // we are returning an array of numbers that do not exceed the limit, but can include it
 // example: number = 5 limit =  25, Returns [5, 10, 15, 20, 25])
+
+const oddOrEven = function (arr) {
+  return arr.reduce((acc, cur) => acc + cur, 0) % 2 ? "odd" : "even";
+};
