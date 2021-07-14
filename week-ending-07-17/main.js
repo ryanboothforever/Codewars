@@ -31,3 +31,48 @@ function getMiddle(s) {
     return arr.join("").slice(arr.length / 2 - 1, arr.length / 2 + 1);
   }
 }
+
+/* Your task is to remove all consecutive duplicate words from a string, leaving only first words entries. For example: // "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta" // --> "alpha beta gamma delta alpha beta gamma delta"*/
+
+function removeDuplicates(str) {
+  let arr = str.split(" ");
+  let newArr = arr.filter((el, i, array) => el != array[i - 1]).join(" ");
+  return newArr;
+}
+
+/* //Create a function that returns the capitilization of a name. No Arrays, No REGEX! //leon ~> Leon //bob ~> Bob //John ~> John*/
+
+function firstCap(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/*Create a function truncate(str, maxlength) that checks the length of the str and, if it exceeds maxlength – replaces the end of str with the ellipsis character "…", to make its length equal to maxlength.
+
+The result of the function should be the truncated (if needed) string.*/
+
+function truncate(str, maxlength) {
+  let arr = str.split("");
+  if (arr.length < maxlength) {
+    return str;
+  } else {
+    return str.slice(0, maxlength - 1) + "…";
+  }
+}
+
+const checkForImposterSyndrome = (x) =>
+  x.includes("can't interview yet") || x.includes("not ready");
+
+/* Make a function that takes in a string and returns that string camelCased */
+
+function camelCase(s) {
+  return s
+    .split(" ")
+    .map((el, i) => {
+      if (i === 0) {
+        return el[0].toLowerCase() + el.slice(1);
+      } else {
+        return el[0].toUpperCase() + el.slice(1);
+      }
+    })
+    .join("");
+}
