@@ -170,3 +170,22 @@ const findAverage = function (nums) {
     }, 0) / nums.length
   );
 };
+
+/* 8 Kyu: Remove n exclamation marks in the sentence from left to right. n is positive integer.*/
+
+function remove(s, n) {
+  for (let i = 0; i < n; i++) s = s.replace("!", "");
+  return s;
+}
+
+/* 8 Kyu: Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .*/
+
+// make each word it's own array item
+// determine the length of each item (map)
+// add the length to the word and return it with the number
+
+function addLength(str) {
+  let arr = str.split(" ");
+  let countLength = arr.map((e) => `${e} ${e.length}`);
+  return countLength;
+}
