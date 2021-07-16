@@ -129,3 +129,28 @@ const alpha = (n) =>
   n.reduce((cur, item) => {
     return cur < item ? cur : item;
   }, "\u0434");
+
+/* Count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+What if the string is empty? Then the result should be empty object literal, {}.*/
+
+// we are taking in a string
+// we are returnining an object with key value pairs, the key being the letter and the value being the number of times that letter is used in the string
+// so if we have a string like "bob", we would return { "b": 2, "o": 1 }
+// I want to split this string up to every character has it's own index.  Then I want to go through each letter, and
+// if that letter has not yet been seen, add it to an object with an initial value of 1.  If it has been seen, do that value ++
+
+function charCounter(str) {
+  let arr = [...str.trim()];
+  let occurances = {};
+  for (let letter of arr) {
+    if (letter === "") {
+      occurances = {};
+    } else if (occurances[letter]) {
+      occurances[letter]++;
+    } else {
+      occurances[letter] = 1;
+    }
+  }
+  return occurances;
+}
