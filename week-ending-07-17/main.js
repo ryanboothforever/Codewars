@@ -76,3 +76,56 @@ function camelCase(s) {
     })
     .join("");
 }
+
+/* 7 Kyu: In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.*/
+
+function highAndLow(numbers) {
+  if (numbers.length === 1) {
+    return `${numbers.toString()} 0`;
+  }
+  let arrOfNums = numbers
+    .split(" ")
+    .map((x) => Number(x))
+    .sort((a, b) => b - a);
+  return `${arrOfNums[0].toString()} ${arrOfNums[
+    arrOfNums.length - 1
+  ].toString()}`;
+}
+
+// Getting a string of numbers, both positive and negative
+// There could be only one number
+// I am returning the highest and lowest numbers of that string, with the highest number being first
+// Though they are numbers, they are being returned as strings
+
+// I want to take the string of numbers and make them into actual numbers
+// Then, we should sort those numbers from high to low in value
+// Finally, we should take the highest and lowest value, and return them as a string
+
+/* 6 Kyu: Given a string, return a new string that has transformed based on the input:
+
+Change case of every character, ie. lower case to upper case, upper case to lower case.
+Reverse the order of words from the input.
+Note: You will have to handle multiple spaces, and leading/trailing spaces.
+
+For example:
+
+"Example Input" ==> "iNPUT eXAMPLE"
+You may assume the input only contain English alphabet and spaces.*/
+
+function stringTransformer(str) {
+  // Your code here
+}
+
+// I am taking in a string, and that string can have multiple words in it.  There won't be anything but letters involved.
+
+// I am returning a string, and that string is the string that was passed in, but in reverse order and with alternating letter casing
+
+//
+
+/* Filter array of strings alphabetically */
+
+let names = ["ryan", "david", "jill"];
+const alpha = (n) =>
+  n.reduce((cur, item) => {
+    return cur < item ? cur : item;
+  }, "\u0434");

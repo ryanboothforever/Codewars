@@ -73,15 +73,29 @@ function authenticate(email, password) {
 
 async function login(email, password) {
   const account = authenticate(email, password);
+  let actionableBreaches;
   if (account) {
-    // A new breach was detected!
-    if (sampleResponse.length > 0) {
+    actionableBreaches = sampleResponse
+      .filter(
+        (res) =>
+          res.IsSensitive === false &&
+          res.DataClasses.includes("Passwords") &&
+          Date.parse(res.AddedDate) > Date.parse(sampleUsers.lastLogin)
+      )
+      .map((breach) => ({
+        name: breach.Name,
+        domain: breach.Domain,
+        breachDate: breach.BreachDate,
+        addedDate: breach.AddedDate,
+      }));
+
+    if (actionableBreaches.length > 0) {
       return {
         success: true,
         meta: {
           suggestPasswordChange: true,
           // hardcoded for now...
-          breachedAccounts: sampleBreaches,
+          breachedAccounts: actionableBreaches,
         },
       };
     } else {
@@ -96,3 +110,5 @@ async function login(email, password) {
 }
 
 export default login;
+
+//
