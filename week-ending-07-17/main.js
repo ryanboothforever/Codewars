@@ -154,3 +154,19 @@ function charCounter(str) {
   }
   return occurances;
 }
+
+/* 8 Kyu: Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a digit (0-9), false otherwise.*/
+
+String.prototype.digit = function () {
+  return digit.match(/0-9/g) > 0;
+};
+
+/* 8 Kyu: Find the mean (average) of a list of numbers in an array.*/
+
+const findAverage = function (nums) {
+  return (
+    nums.reduce((acc, cur) => {
+      return acc + cur;
+    }, 0) / nums.length
+  );
+};
