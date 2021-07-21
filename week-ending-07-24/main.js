@@ -39,3 +39,31 @@ function derive(coefficient, exponent) {
   let total = String(coefficient * exponent);
   return `${total}x^${String(exponent - 1)}`;
 }
+
+/* 8 Kyu: Complete the function, which calculates how much you need to tip based on the total amount of the bill and the service.
+
+You need to consider the following ratings:
+
+Terrible: tip 0%
+Poor: tip 5%
+Good: tip 10%
+Great: tip 15%
+Excellent: tip 20%
+The rating is case insensitive (so "great" = "GREAT"). If an unrecognised rating is received, then you need to return:*/
+
+function calculateTip(amount, rating) {
+  let caseSense = rating.toLowerCase();
+  if (caseSense === "excellent") {
+    return Math.ceil(amount * 0.2);
+  } else if (caseSense === "great") {
+    return Math.ceil(amount * 0.15);
+  } else if (caseSense === "good") {
+    return Math.ceil(amount * 0.1);
+  } else if (caseSense === "poor") {
+    return Math.ceil(amount * 0.05);
+  } else if (caseSense === "terrible") {
+    return 0;
+  } else {
+    return "Rating not recognised";
+  }
+}
