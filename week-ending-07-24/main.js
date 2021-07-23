@@ -85,3 +85,10 @@ const calculateTips = (amount, rating) => {
     ? Math.ceil(TIPS[rating] * amount)
     : "Rating not recognised";
 };
+
+/* 8 Kyu: Write a function that returns a string in which firstname is swapped with last name.*/
+
+const nameShuffler = (str) => {
+  const arr = str.split(" ");
+  return `${arr[1]} ${arr[0]}`;
+};
