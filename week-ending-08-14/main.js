@@ -61,3 +61,13 @@ function multipleOfIndex(arr) {
   });
   return newArr;
 }
+
+/* Take in an array and reverse it, without using the reverse method */
+
+function reverseWithoutReverse(arr) {
+  const newArr = [];
+  for (const item of arr) {
+    newArr.unshift(item);
+  }
+  return newArr;
+}
