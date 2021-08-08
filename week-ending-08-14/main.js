@@ -50,7 +50,14 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
 /*8 Kyu: Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.*/
 
 function isDigit(s) {
-  return Number(s) ? true : false;
+  return s == parseFloat(s);
 }
 
-console.log(Number("5"));
+/* 8 Kyu: Return a new array consisting of elements which are multiple of their own index in input array (length > 1).*/
+
+function multipleOfIndex(arr) {
+  let newArr = arr.filter((el, i) => {
+    return el % i === 0;
+  });
+  return newArr;
+}
