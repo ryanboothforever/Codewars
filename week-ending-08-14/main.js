@@ -46,3 +46,11 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
     return "Shark Bait!";
   }
 }
+
+/*8 Kyu: Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.*/
+
+function isDigit(s) {
+  return Number(s) ? true : false;
+}
+
+console.log(Number("5"));
