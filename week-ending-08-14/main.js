@@ -9,3 +9,11 @@ and return a string like this:
 function animal(obj) {
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
 }
+
+/* 8 Kyu: Your task is simply to count the total number of lowercase letters in a string.*/
+
+function lowercaseCount(str) {
+  const regex = /[a-z]/g;
+  let count = str.match(regex);
+  return count === null ? 0 : count.length;
+}
