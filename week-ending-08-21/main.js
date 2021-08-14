@@ -37,4 +37,26 @@ function whatday(num) {
   }
 }
 
-console.log(whatday(3));
+/*Given a phrase, reverse the order of the characters of each word.
+
+describe("Reverse Words", () => {
+ it("Should reverse words", () => {
+  assert.equal(reverseWords("I love JavaScript!"), "I evol !tpircSavaJ");
+ });
+});
+
+No Reverse Method! Unless that is your brute force...*/
+
+function reverseWordsInPlace(str) {
+  const newArr = [];
+  const arr = str.split(" ").forEach((w) => {
+    let currentWord = "";
+    for (let i = w.length - 1; i >= 0; i--) {
+      currentWord += w[i];
+    }
+    newArr.push(currentWord);
+  });
+  return newArr.join(" ");
+}
+
+/* 8 Kyu: Write a function that accepts two arguments and returns the remainder after dividing the larger number by the smaller number. Division by zero should return NaN (in C#, throw a new DivideByZeroException instead). Arguments will both be integers.*/
