@@ -78,3 +78,29 @@ const combineNames = (first, last) => {
 function odds(values) {
   return values.filter((el) => el % 2 !== 0);
 }
+
+/* 8 Kyu: Your task is to write a function that takes two parameters: the year of birth and the year to count years in relation to. As Philip is getting more curious every day he may soon want to know how many years it was until he would be born, so your function needs to work with both dates in the future and in the past.*/
+
+function calculateAge(yearBorn, yearCount) {
+  if (yearBorn < yearCount) {
+    return yearCount - yearBorn === 1
+      ? "You are 1 year old."
+      : `You are ${yearCount - yearBorn} years old.`;
+  } else if (yearBorn > yearCount) {
+    return yearBorn - yearCount === 1
+      ? "You will be born in 1 year."
+      : `You will be born in ${yearBorn - yearCount} years.`;
+  } else {
+    return "You were born this very year!";
+  }
+}
+
+/* 8 Kyu: Write function parseF which takes an input and returns a number or null if conversion is not possible. The input can be one of many different types so be aware.*/
+
+function parseF(s) {
+  if (Number(s) != parseFloat(s)) {
+    return null;
+  } else {
+    return parseFloat(s);
+  }
+}
