@@ -11,3 +11,19 @@ Assume shortenToDate's input will always be a string, e.g. "Friday May 2, 7pm". 
 function shortenToDate(longDate) {
   return longDate.substr(0, longDate.indexOf(","));
 }
+
+/* 8 Kyu: Teach snoopy and scooby doo how to bark using object methods. Currently only snoopy can bark and not scooby doo.*/
+
+function Dog(breed) {
+  this.breed = breed;
+}
+
+var snoopy = new Dog("Beagle");
+
+snoopy.bark = function () {
+  return "Woof";
+};
+
+var scoobydoo = new Dog("Great Dane");
+
+scoobydoo.bark = snoopy.bark;
