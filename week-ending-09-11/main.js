@@ -32,3 +32,16 @@ scoobydoo.bark = snoopy.bark;
 
 items = [];
 items.push({ a: "b", c: "d" });
+
+/* 8 Kyu: Remove all exclamation marks from the end of sentence.*/
+
+function remove(s) {
+  let arr = s.split("");
+
+  for (char of arr) {
+    if (arr[arr.length - 1] === "!") {
+      arr.pop();
+    }
+  }
+  return arr.join("");
+}
