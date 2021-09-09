@@ -52,3 +52,9 @@ function usdcny(usd) {
   let cny = usd * 6.75;
   return `${cny.toFixed(2)} Chinese Yuan`;
 }
+
+/* 8 Kyu:  Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.*/
+
+function stringClean(s) {
+  return s.replace(/[0-9]/g, "");
+}
