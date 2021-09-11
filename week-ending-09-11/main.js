@@ -58,3 +58,10 @@ function usdcny(usd) {
 function stringClean(s) {
   return s.replace(/[0-9]/g, "");
 }
+
+/* 8 Kyu: This function should return an object, but it's not doing what's intended. What's wrong?*/
+
+function mystery() {
+  var results = { sanity: "Hello" };
+  return results;
+}
