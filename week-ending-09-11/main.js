@@ -65,3 +65,16 @@ function mystery() {
   var results = { sanity: "Hello" };
   return results;
 }
+
+/* 7 Kyu: Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.*/
+
+function descendingOrder(n) {
+  const arr = String(n).split("");
+  return Number(arr.sort().reverse().join(""));
+}
+console.log(descendingOrder(0));
+
+// Taking in a number
+// returning the highest possible number
+// 105 returns 510
+// I want to take in a number, split it up, sort it so the highest number is first and the numbers are arranged in descending order, combine the numbers again and return it
